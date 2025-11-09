@@ -1,3 +1,4 @@
+import Register from "./pages/Register"; // <-- NY
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -7,8 +8,8 @@ import AddListing from "./pages/AddListing";
 import Messages from "./pages/Messages";
 import Profile from "./pages/Profile";
 
+
 function App() {
-  // Eksempel-lister som vises på Home / Profile
   const [listings, setListings] = useState([
     { id: 1, title: "Babyjakke blå", description: "Pent brukt, 1 år", price: "150kr", image: "https://via.placeholder.com/150" },
     { id: 2, title: "Småbarn bukse", description: "Aldri brukt", price: "100kr", image: "https://via.placeholder.com/150" }
@@ -23,6 +24,7 @@ function App() {
           <Route path="/add" element={<AddListing listings={listings} setListings={setListings} />} />
           <Route path="/messages" element={<Messages />} />
           <Route path="/profile" element={<Profile listings={listings} />} />
+          <Route path="/register" element={<Register />} /> {/* <-- NY */}
         </Routes>
       </main>
       <Footer />

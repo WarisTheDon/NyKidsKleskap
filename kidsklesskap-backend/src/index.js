@@ -6,13 +6,12 @@ import auth from "./routes/auth.js";
 const app = express();
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "http://localhost:5175", // ← HELE nøkkelen !!
   credentials: true
 }));
 
 app.use(express.json());
 
-// API routes
 app.use("/api", auth);
 
 app.listen(process.env.PORT, () => {

@@ -11,6 +11,7 @@ const Navbar = () => {
         <li><Link to="/add">Legg ut annonse</Link></li>
         <li><Link to="/messages">Meldinger</Link></li>
         <li><Link to="/profile">Profil</Link></li>
+        <li><Link to="/register">Register</Link></li> {/* <-- NY */}
       </ul>
     </nav>
   );
